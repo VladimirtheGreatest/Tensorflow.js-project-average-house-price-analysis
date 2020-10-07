@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tensorflow/tfjs-node": "^0.1.21",
+    "@tensorflow/tfjs-node": "^2.4.0",
     "lodash": "^4.17.20",
     "shuffle-seed": "^1.1.6"
   }

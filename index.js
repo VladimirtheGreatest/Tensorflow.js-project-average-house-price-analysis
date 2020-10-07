@@ -11,9 +11,9 @@ function knn(features, labels, predictionPoint, k){
      .expandDims(1) // expand dimension due to different shapes
      .concat(labels, 1) //join tensors
      .unstack() //create js array of tensors from tensor
-     .sort((a, b) => a.get(0) > b.get(0) ? 1 : -1)
+     .sort((a,b)=> a.arraySync()[0]> b.arraySync()[0]? 1:-1)
      .slice(0, k)
-     .reduce((acc, pair) => acc + pair.get(1), 0) / k     //we are using regression so getting an average house price
+     .reduce((acc,pair)=>acc+pair.arraySync()[1],0)/k;   //we are using regression so getting an average house price
 
 }
 
